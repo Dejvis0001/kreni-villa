@@ -65,67 +65,50 @@ elements4.forEach((elements4) => {
   observer4.observe(elements4);
 });
 //Index-Home
-document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".home-slider", {
-    grabCursor: true,
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-      delay: 6000, // Set autoplay delay to 6 seconds
+$('.owl-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  autoplay: true,
+  responsive: {
+      0: {
+          items: 1
+      },
+      430: {
+          items: 1
+      },
+      600: {
+          items: 2
+      },
+      1000: {
+          items: 3
+      }
+  }
+})
+//Index-Gallery
+var swiper = new Swiper(".gallery-slider", {
+  spaceBetween: 10,
+  grabCursor: true,
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+      delay: 1500,
       disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-  // Get the next and prev buttons
-  var nextButton = document.querySelector(".swiper-button-next");
-  var prevButton = document.querySelector(".swiper-button-prev");
-
-  // Attach click event handlers
-  nextButton.addEventListener("click", function () {
-    swiper.slideNext();
-  });
-
-  prevButton.addEventListener("click", function () {
-    swiper.slidePrev();
-  });
+  },
+  pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+  },
+  breakpoints: {
+      0: {
+          slidesPerView: 1,
+      },
+      768: {
+          slidesPerView: 3,
+      },
+      991: {
+          slidesPerView: 4,
+      },
+  },
 });
-document.addEventListener("DOMContentLoaded", function () {
-  initializeSwiperCarousel(".room1-carousel");
-
-  // Function to initialize Swiper Carousel
-  function initializeSwiperCarousel(selector) {
-      var swiper = new Swiper(selector, {
-          loop: true,
-          autoplay: {
-              delay: 6000,
-              disableOnInteraction: false,
-          },
-          navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-          },
-      });
-  }
-});
-document.addEventListener("DOMContentLoaded", function () {
-  initializeSwiperCarousel(".room2-carousel");
-
-  // Function to initialize Swiper Carousel
-  function initializeSwiperCarousel(selector) {
-      var swiper = new Swiper(selector, {
-          loop: true,
-          autoplay: {
-              delay: 6000,
-              disableOnInteraction: false,
-          },
-          navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-          },
-      });
-  }
-});
+//Index-Testimonials
