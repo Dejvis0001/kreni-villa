@@ -352,6 +352,14 @@ li {
     background: #00000041;
     border-radius: 30px;
 }
+div.single-service div.col-sm-12.text-center.my-4{
+    font-size: 24px;
+}
+.single-service:hover{
+    border: unset;
+    background: #e4c590;
+    color: white;
+}
 .jumbotron {
     background: url(assets/image/1.jpg) rgba(0, 0, 0, .3);
     background-position-x: 0%;
@@ -368,7 +376,7 @@ li {
 }
 .review-section {
     padding: 3rem 3rem 0 3rem;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .6);
 }
 .pb-0 {
     padding-bottom: 0px !important;
@@ -405,7 +413,7 @@ li {
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    min-height: 310px;
+    min-height: 290px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
     transition: all .3s ease;
 }
